@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo" href="#">
+        <img class="header__logo-image" src="http://placehold.it/20x20" alt="Кэт Энерджи">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+
+      <h1 class="Подбор программы">Подбор программы</h1>
+
+      <section class="application">
+        <h2 class="visually-hidden">Анкета</h2>
+        <p class="application__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="application__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="application__item">
+            <div class="">
+              <label>Имя:*
+                <input type="text" name="" placeholder="Барсик">
+              </label>
+              <label>Вес (кг):*
+                <input type="text" name="" placeholder="7">
+              </label>
+              <label>Возраст (лет):
+                <input type="text" name="" placeholder="7">
+              </label>
+            </div>
+            <div class="">
+              <label>Похудение
+                <input type="radio" name="" value="">
+              </label>
+              <label>Набор массы
+                <input type="radio" name="" value="">
+              </label>
+              <label>Не знаю (Нужен ваш совет)
+                <input type="radio" name="" value="">
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="application__item">
+            <legend class="">Контактные данные(владельца кота)</legend>
+            <div class="">
+              <label>E-mail:*
+                <input type="email" name="" placeholder="kuklachev@gmail.com">
+              </label>
+              <label>Телефон:*
+                <input type="tel" name="" placeholder="8 (960) 900-60-90">
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="application__item">
+            <legend class="">Комментарий</legend>
+            <textarea name="" rows="8" cols="80" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="application__item">
+            <legend class="">Дополнительно</legend>
+            <label>Сахарозаменитель
+              <input type="checkbox" name="" value="">
+            </label>
+            <label>Питьевая вода
+              <input type="checkbox" name="" value="">
+            </label>
+            <label>Молоко
+              <input type="checkbox" name="" value="">
+            </label>
+            <label>Витамины
+              <input type="checkbox" name="" value="">
+            </label>
+          </fieldset>
+          <a class="" href="#">Отправить заявку</a>
+          <p class="">* - Обязательные поля</p>
+        </form>
+      </section>
+
+      <section class="address">
+        <h2 class="visually-hidden">Адрес</h2>
+        <b class="address__cooperation">Приглашаем к сотрудничеству дилеров!</b>
+        <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <img class="address__map" src="http://placehold.it/20x20" alt="Местоположение на карте">
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer__logo" href="#">
+        <img class="footer__logo-image" src="http://placehold.it/20x20" alt="Кэт Энерджи">
+      </a>
+      <ul class="footer__list social">
+        <li class="social__item">
+          <a class="social__link" href="#">Вконтакте</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">Инстаграмм</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">Фейсбук</a>
+        </li>
+      </ul>
+      <a class="footer__link" href="#">HTML Academy
+        <img src="http://placehold.it/20x20" alt="Логотип академии">
+      </a>
+    </footer>
+  </body>
+</html>
