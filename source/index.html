@@ -8,7 +8,7 @@
   <body>
     <header class="header">
       <a class="header__logo">
-        <img class="header__logo-image" src="http://placehold.it/20x20" alt="Кэт Энерджи">
+        <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Кэт Энерджи">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -16,13 +16,13 @@
         </button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="#">Главная</a>
+            <a class="site-list__link">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Каталог продукции</a>
+            <a class="site-list__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Подбор программы</a>
+            <a class="site-list__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -34,9 +34,10 @@
 
       <section class="offer">
         <h2 class="visually-hidden">Предложение</h2>
-        <b class="offer__title">Функциональное питание для котов</b>
-        <p class="offer__text">Занялся собой? Займись котом!</p>
-        <a class="offer__selection" href="#">Подобрать программу</a>
+          <b class="offer__title">Функциональное питание для котов</b>
+          <p class="offer__text">Занялся собой? Займись котом!</p>
+          <img src="img/index-can-mobile@1x.png" alt="Упаковка питания">
+          <a class="offer__selection" href="#">Подобрать программу</a>
       </section>
 
       <section class="catalog">
@@ -93,27 +94,33 @@
         <h2 class="visually-hidden">Адрес</h2>
         <b class="address__cooperation">Приглашаем к сотрудничеству дилеров!</b>
         <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        <img class="address__map" src="http://placehold.it/20x20" alt="Местоположение на карте">
+        <img class="address__map" src="img/bg-map-mobile@1x.png" alt="Местоположение на карте">
       </section>
     </main>
 
     <footer class="footer">
       <a class="footer__logo" href="#">
-        <img class="footer__logo-image" src="http://placehold.it/20x20" alt="Кэт Энерджи">
+        <img class="footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Кэт Энерджи">
       </a>
       <ul class="footer__list social">
         <li class="social__item">
-          <a class="social__link" href="#">Вконтакте</a>
+          <a class="social__link" href="#">
+            <span class="vissualy-hidden">Вконтакте</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#">Инстаграмм</a>
+          <a class="social__link" href="#">
+            <span class="vissualy-hidden">Инстаграмм</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="#">Фейсбук</a>
+          <a class="social__link" href="#">
+            <span class="vissualy-hidden">Фейсбук</span>
+          </a>
         </li>
       </ul>
       <a class="footer__link" href="#">HTML Academy
-        <img src="http://placehold.it/20x20" alt="Логотип академии">
+        <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип академии">
       </a>
     </footer>
   </body>
