@@ -1,0 +1,63 @@
+.address__wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 5.9%;
+  background-color: @white;
+  z-index: 2;
+}
+
+.address__cooperation {
+  display: block;
+  margin-top: 27px;
+  margin-bottom: 27px;
+  width: 140px;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  color: @black-two;
+  text-transform: uppercase;
+}
+
+.address__text {
+  margin: 0;
+  margin-top: 27px;
+  margin-bottom: 27px;
+  padding: 0;
+  width: 140px;
+
+  font-family: "Arial", sans-serif;
+  line-height: 1.43;
+}
+
+.address__map-wrapper {
+  position: relative;
+  margin: 0 auto;
+  background-color: @white-two;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    top: 175px;
+    left: 50%;
+    width: 55px;
+    height: 55px;
+    background-image: url("../../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 3;
+    transform: translateX(-50%);
+  }
+}
+
+.address__map {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  margin-top: -38px;
+}
