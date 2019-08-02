@@ -7,6 +7,10 @@
   padding: 0 5.9%;
   background-color: @white;
   z-index: 2;
+
+  &--catalog {
+    background-color: @white-two;
+  }
 }
 
 .address__cooperation {
@@ -47,7 +51,7 @@
     left: 50%;
     width: 55px;
     height: 55px;
-    background-image: url("../../img/map-pin.png");
+    background-image: url("../img/map-pin.png");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 3;
@@ -60,4 +64,10 @@
   display: flex;
   margin: 0 auto;
   margin-top: -38px;
+}
+
+.address__iframe {
+  position: absolute;
+  z-index: 3;
+  margin-top: -362px;
 }
