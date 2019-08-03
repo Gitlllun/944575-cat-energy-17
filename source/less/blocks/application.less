@@ -1,62 +1,226 @@
 .application {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .application__text {
+  margin: 0;
+  padding: 0 20px;
+  margin-bottom: 35px;
   line-height: 1.29;
   color: @black-two;
   text-transform: uppercase;
 }
 
-.application__form {
-
-}
-
 .application__item {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
 .application__info {
-
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
 }
 
-.application__label {
-  font-size: 16px;
-  line-height: 1.13;
-  text-transform: uppercase;
-  color: @black-two;
+.application__info-label {
+  margin: 14px 0;
 }
 
-.application__input {
+.application__info-input {
+  flex-grow: 1;
+  margin-left: 15px;
+  padding: 13px 15px;
   font-size: 16px;
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
-  // color: @black-three;
+  border: 1px solid @gray-four;
 
   &::placeholder {
     color: @gray-two;
+    opacity: 1;
   }
 }
 
 .application__choice {
+  position: relative;
+  padding: 10px 20px;
+  border: 1px solid @gray-three;
+}
 
+.application__choice-radio {
+  display: flex;
+  flex-direction: column;
+}
+
+.application__choice-label {
+  padding: 12px 0 12px 46px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    padding: 8px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid @gray-four;
+    border-radius: 50%;
+  }
+}
+
+.application__choice-input:checked ~ .application__choice-label::before {
+  background-color: @leaf;
+  background-clip: content-box;
 }
 
 .application__title {
+  display: inline-block;
+  position: relative;
   font-size: 24px;
   color: @black-two;
+  padding: 30px 20px;
+  background-color: @white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100vw;
+    height: 3px;
+    background-color: @leaf;
+    z-index: -1;
+  }
+}
+
+.application__title-comment {
+  display: block;
+}
+
+.application__contacts {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.application__contacts-label {
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.application__contacts-input {
+  flex-grow: 1;
+  margin-left: 15px;
+  padding: 13px 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
+  border: 1px solid @gray-four;
+
+  &::placeholder {
+    color: @gray-two;
+    opacity: 1;
+  }
+}
+
+.application__comment {
+  display: flex;
+  padding: 0 20px;
+}
+
+.application__comment-area {
+  padding: 13px;
+  width: 100%;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
+  border: 1px solid @gray-four;
+
+  &::placeholder {
+    color: @gray-two;
+    opacity: 1;
+  }
+}
+
+.application__addon {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.application__addon-label {
+  padding: 12px 0 12px 46px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    border: 1px solid @gray-four;
+  }
+}
+
+.application__addon-input:checked ~ .application__addon-label::before {
+  background-image: url("../../img/icon-tick.svg");
+  background-size: 21px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+}
+
+.application__send {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+  padding: 0 20px;
 }
 
 .application__button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
   font-size: 16px;
   line-height: 1.25;
   color: @white;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   background-color: @leaf;
 }
 
 .application__text-field {
+  margin: 0 auto;
+  margin-bottom: 35px;
   font-family: "Arial", sans-serif;
   line-height: 1.14;
+}
+
+.form__label {
+  display: flex;
+  position: relative;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.13;
+  text-transform: uppercase;
+  color: @black-two;
+  cursor: pointer;
+}
+
+.form__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
