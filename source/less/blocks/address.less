@@ -3,17 +3,21 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 0 5.9%;
+  margin: 0;
+  padding: 0 20px;
   background-color: @white;
   z-index: 2;
+
+  &--white {
+    background-color: @white-two;
+  }
 }
 
 .address__cooperation {
   display: block;
   margin-top: 27px;
   margin-bottom: 27px;
-  width: 140px;
+  width: 50%;
 
   font-weight: normal;
   font-size: 16px;
@@ -26,8 +30,7 @@
   margin: 0;
   margin-top: 27px;
   margin-bottom: 27px;
-  padding: 0;
-  width: 140px;
+  width: 50%;
 
   font-family: "Arial", sans-serif;
   line-height: 1.43;
@@ -45,9 +48,10 @@
 
     top: 175px;
     left: 50%;
+    margin-left: -10px;
     width: 55px;
     height: 55px;
-    background-image: url("../../img/map-pin.png");
+    background-image: url("../img/map-pin.png");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 3;
@@ -60,4 +64,10 @@
   display: flex;
   margin: 0 auto;
   margin-top: -38px;
+}
+
+.address__iframe {
+  position: absolute;
+  z-index: 3;
+  margin-top: -362px;
 }
