@@ -1,7 +1,7 @@
 .copyright__link {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 30px;
 
   font-family: "Arial", sans-serif;
@@ -26,4 +26,17 @@
 
 .copyright__link:active .copyright__logo {
   opacity: 0.3;
+}
+
+//ПЛАНШЕТ//
+
+@media (min-width: @tablet-width) {
+  .copyright__link {
+    margin: 0;
+    align-self: center;
+  }
+
+  .copyright__logo {
+    padding-left: 23px;
+  }
 }

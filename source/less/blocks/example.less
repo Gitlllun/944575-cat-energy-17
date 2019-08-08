@@ -28,7 +28,6 @@
 
 .example__list {
   display: flex;
-  justify-content: space-between;
   margin-top: 25px;
   padding: 0;
 
@@ -38,7 +37,11 @@
 .example__item {
   display: flex;
   flex-direction: column;
-  width: 43%;
+  margin-right: 32px;
+  width: 50%;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .example__text-top {
@@ -61,7 +64,7 @@
 
   margin: 0 auto;
   margin-top: -8px;
-  padding: 0 12.1%;
+  padding: 0 15px;
   width: 45%;
 
   font-family: "Arial", sans-serif;
@@ -152,4 +155,48 @@
 
   border-radius: 3px;
   background-color: #68b738;
+}
+
+//ПЛАНШЕТ//
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: @white;
+  }
+
+  .example__title {
+    font-size: 60px;
+    padding: 50px 30px 60px 30px;
+    border-top: 1px solid @gray-three;
+  }
+
+  .example__wrapper {
+    padding: 0 30px;
+  }
+
+  .example__text {
+    padding-right: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .example__list {
+    width: 366px;
+  }
+
+  .example__item {
+    margin-right: 42px;
+  }
+
+  .example__text-top {
+    font-size: 30px;
+    line-height: 1.23;
+  }
+
+  .example__text-bottom {
+    width: auto;
+    padding: 0 8px;
+    font-size: 14px;
+    background-color: @white;
+  }
 }

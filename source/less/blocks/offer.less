@@ -57,3 +57,57 @@
   background-color: @leaf;
   text-align: center;
 }
+
+
+//ПЛАНШЕТ//
+
+@media (min-width: @tablet-width) {
+  .offer {
+    &::before {
+      border: none;
+      background-image: none;
+      background-color: transparent;
+    }
+  }
+
+  .offer__wrapper {
+    min-height: 850px;
+  }
+
+  .offer__title {
+    margin-top: 45px;
+    margin-bottom: 35px;
+    margin-left: 90px;
+    width: 415px;
+
+    font-size: 60px;
+    color: @black-two;
+
+    text-align: left;
+  }
+
+  .offer__text {
+    margin-bottom: 48px;
+    margin-left: 90px;
+
+    font-size: 20px;
+    color: @black-two;
+  }
+
+  .offer__image {
+    position: absolute;
+    width: 708px;
+    margin-top: -30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .offer__selection {
+    margin: 0 auto;
+    margin-left: 90px;
+    padding: 16px 27px;
+
+    font-size: 20px;
+  }
+}
