@@ -33,7 +33,6 @@
   .site-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 45px;
     width: 480px;
   }
 
@@ -62,6 +61,31 @@
         height: 2px;
 
         background-color: @leaf;
+      }
+    }
+  }
+}
+
+//ДЕСКТОП//
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 520px;
+  }
+
+  .site-list__item {
+    margin-bottom: 45px;
+  }
+
+  .site-list__link {
+    font-size: 20px;
+    line-height: 1.25px;
+    color: @white;
+
+    &--active {
+      &::before {
+        top: 20px;
+        background-color: @white;
       }
     }
   }

@@ -149,7 +149,7 @@
   .catalog__item {
     margin: 0 auto;
     margin-bottom: 30px;
-    min-width: 708px;
+    width: 708px;
   }
 
   .catalog__title {
@@ -214,5 +214,61 @@
       width: 25px;
       height: 12px;
     }
+  }
+}
+
+//ДЕСКТОП//
+
+@media (min-width: @desktop-width) {
+  .catalog__list {
+    flex-direction: row;
+    width: 1220px;
+    padding: 0 30px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .catalog__item {
+    margin: 0;
+    width: 570px;
+  }
+
+  .catalog__title {
+    width: 210px;
+    margin-bottom: 75px;
+    margin-left: 215px;
+
+    &::before {
+      top: -25px;
+      left: -165px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim {
+      &::after {
+        top: -30px;
+        left: -150px;
+        width: 71px;
+        height: 97px;
+      }
+    }
+
+    &--pro {
+      &::after {
+        top: 0;
+        left: -180px;
+        width: 134px;
+        height: 57px;
+      }
+    }
+  }
+
+  .catalog__text {
+    width: 462px;
+  }
+
+  .catalog__link {
+    margin-top: 35px;
   }
 }
