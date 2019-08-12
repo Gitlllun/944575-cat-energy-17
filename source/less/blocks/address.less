@@ -15,8 +15,7 @@
 
 .address__cooperation {
   display: block;
-  margin-top: 27px;
-  margin-bottom: 27px;
+  margin: 27px 0;
   width: 50%;
 
   font-weight: normal;
@@ -27,9 +26,7 @@
 }
 
 .address__text {
-  margin: 0;
-  margin-top: 27px;
-  margin-bottom: 27px;
+  margin: 27px 0;
   width: 50%;
 
   font-family: "Arial", sans-serif;
@@ -60,6 +57,8 @@
 }
 
 .address__map {
+  object-fit: cover;
+  height: 400px;
   position: relative;
   display: flex;
   margin: 0 auto;
@@ -70,4 +69,43 @@
   position: absolute;
   z-index: 3;
   margin-top: -362px;
+}
+
+//ПЛАНШЕТ//
+
+@media (min-width: @tablet-width) {
+  .address__cooperation {
+    width: 154px;
+    margin: 70px 0 60px 0;
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .address__text {
+    width: 155px;
+    margin: 65px 0 60px 0;
+    padding-right: 40px;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: right;
+  }
+
+  .address__wrapper {
+    padding: 0 30px;
+  }
+
+  .address__city {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .address__map-wrapper {
+    &::before {
+      top: 150px;
+      margin: 0;
+      width: 113px;
+      height: 106px;
+    }
+  }
 }

@@ -57,3 +57,91 @@
   background-color: @leaf;
   text-align: center;
 }
+
+
+//ПЛАНШЕТ//
+
+@media (min-width: @tablet-width) {
+  .offer {
+    &::before {
+      display: none;
+    }
+  }
+
+  .offer__wrapper {
+    min-height: 850px;
+  }
+
+  .offer__title {
+    margin-top: 45px;
+    margin-bottom: 35px;
+    margin-left: 90px;
+    width: 415px;
+
+    font-size: 60px;
+    color: @black-two;
+
+    text-align: left;
+  }
+
+  .offer__text {
+    margin-bottom: 48px;
+    margin-left: 90px;
+
+    font-size: 20px;
+    color: @black-two;
+  }
+
+  .offer__image {
+    position: absolute;
+    width: 708px;
+    margin-top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .offer__selection {
+    position: relative;
+    margin: 0 auto;
+    margin-left: 90px;
+    padding: 16px 27px;
+
+    font-size: 20px;
+  }
+}
+
+//ДЕСКТОП//
+
+@media (min-width: @desktop-width) {
+  .offer {
+    &::before {
+      display: block;
+      top: 0;
+      width: 50%;
+      height: 696px;
+      margin-left: 50%;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+    }
+  }
+
+  .offer__wrapper {
+    position: relative;
+    width: 1220px;
+    padding: 0 30px;
+    margin: 0 auto;
+    min-height: 650px;
+  }
+
+  .offer__image {
+    top: 25px;
+    width: 552px;
+    margin-top: 0;
+    margin-left: 115px;
+  }
+
+  .offer__title {
+    margin-top: 110px;
+    margin-left: 85px;
+  }
+}

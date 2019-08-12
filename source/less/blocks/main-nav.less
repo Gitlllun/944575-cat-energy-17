@@ -65,3 +65,32 @@
     display: block;
   }
 }
+
+//ПЛАНШЕТ//
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    margin-right: 30px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    margin-top: 45px;
+  }
+}
+
+//ДЕСКТОП//
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    margin: 0;
+  }
+
+  .main-nav__list {
+    margin-top: 75px;
+  }
+}
+
