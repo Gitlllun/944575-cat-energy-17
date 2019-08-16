@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0 20px;
   background-color: @white;
-  z-index: 2;
+  z-index: 3;
 
   &--white {
     background-color: @white-two;
@@ -51,7 +51,7 @@
     background-image: url("../img/map-pin.png");
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 3;
+    z-index: 2;
     transform: translateX(-50%);
   }
 }
@@ -75,7 +75,7 @@
 
 @media (min-width: @tablet-width) {
   .address__cooperation {
-    width: 154px;
+    width: 194px;
     margin: 70px 0 60px 0;
     padding-left: 40px;
     font-size: 20px;
@@ -83,7 +83,7 @@
   }
 
   .address__text {
-    width: 155px;
+    width: 195px;
     margin: 65px 0 60px 0;
     padding-right: 40px;
     font-size: 16px;
@@ -106,6 +106,54 @@
       margin: 0;
       width: 113px;
       height: 106px;
+      z-index: 1;
+    }
+  }
+
+  .address__map {
+    margin-top: 0;
+  }
+
+  .address__iframe {
+    height: 400px;
+    margin-top: -400px;
+  }
+}
+
+//ДЕСКТОП//
+
+@media (min-width: @desktop-width) {
+  .address {
+    position: relative;
+  }
+
+  .address__wrapper {
+    position: absolute;
+    padding: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 95px;
+    margin-left: -380px;
+    justify-content: stretch;
+    background-color: @white;
+  }
+
+  .address__cooperation {
+    margin: 0;
+    padding: 70px 40px;
+    z-index: 3;
+  }
+
+  .address__text {
+    margin: 0;
+    padding: 70px 40px;
+    text-align: left;
+    z-index: 3;
+  }
+
+  .address__map-wrapper {
+    &::before {
+      margin-left: 330px;
     }
   }
 }
