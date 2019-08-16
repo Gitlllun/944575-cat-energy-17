@@ -105,3 +105,80 @@
     background-repeat: no-repeat;
   }
 }
+
+//ПЛАНШЕТ//
+
+@media (min-width: @tablet-width) {
+  .addon__title {
+    font-size: 36px;
+    margin-left: 30px;
+
+    &::after {
+      top: 20px;
+      left: -30px;
+    }
+  }
+
+  .addon__list {
+    padding: 0 30px;
+    margin-bottom: 70px;
+  }
+
+  .addon__item {
+    padding: 0 38px;
+    align-items: center;
+    border-left: 1px solid @gray-three;
+    border-right: 1px solid @gray-three;
+  }
+
+  .addon__item-title {
+    width: auto;
+    flex-grow: 1;
+    margin: 27px 0;
+    font-size: 20px;
+  }
+
+  .addon__value {
+    width: 245px;
+    margin: 0;
+    padding-left: 20px;
+    text-align: right;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .addon__cost {
+    margin: 0;
+    padding-left: 20px;
+    width: 74px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .addon__buy {
+    margin: 0;
+    margin-bottom: 28px;
+  }
+
+  .addon__wrapper {
+    margin: 0 30px;
+    margin-bottom: 75px;
+    min-height: 200px;
+    background-image: url(../img/gift-photo-tablet@1x.jpg);
+  }
+
+  .addon__text {
+    margin: 0;
+    margin-left: auto;
+    padding-top: 75px;
+    padding-right: 125px;
+    width: 169px;
+    text-align: left;
+
+    &::before {
+      top: 65px;
+      left: 90px;
+      transform: translateX(0%);
+    }
+  }
+}
