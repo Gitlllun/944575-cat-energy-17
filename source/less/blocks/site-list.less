@@ -80,13 +80,21 @@
   .site-list__link {
     font-size: 20px;
     line-height: 1.25px;
-    color: @white;
 
     &--active {
       &::before {
         top: 20px;
+      }
+    }
+
+    &--active-desktop {
+      &::before {
         background-color: @white;
       }
+    }
+
+    &--desktop {
+      color: @white;
     }
   }
 }

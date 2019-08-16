@@ -10,11 +10,11 @@
 
 <body>
   <header class="header">
-    <a class="header__logo" href="index.html" class="header__logo">
+    <a class="header__logo" href="index.html">
       <picture>
         <source media="(min-width: 1280px)" srcset="img/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-        <img src="img/logo-mobile.svg" width="191" height="39" alt="Кэт Энерджи">
+        <img class="header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Кэт Энерджи">
       </picture>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -217,7 +217,7 @@
           </div>
           <a class="assortment__buy" href="#">Заказать</a>
         </li>
-        <li class="assortment__item-more">
+        <li class="assortment__item assortment__item-more">
           <b class="assortment__more">Показать еще 100500 товаров</b>
           <p class="assortment__text">На самом деле вкусов гораздо больше!</p>
           <a class="assortment__show" href="#">Показать все</a>
@@ -227,34 +227,36 @@
 
     <section class="addon">
       <h2 class="addon__title">Дополнительные товары</h2>
-      <ul class="addon__list">
-        <li class="addon__item">
-          <h3 class="addon__item-title">Сахарозаменитель</h3>
-          <p class="addon__value">1 упаковка (100 г)</p>
-          <p class="addon__cost">200 Р.</p>
-          <a class="addon__buy" href="#">Заказать</a>
-        </li>
-        <li class="addon__item">
-          <h3 class="addon__item-title">Питьевая вода</h3>
-          <p class="addon__value">5 литров</p>
-          <p class="addon__cost">50 Р.</p>
-          <a class="addon__buy" href="#">Заказать</a>
-        </li>
-        <li class="addon__item">
-          <h3 class="addon__item-title">Молоко</h3>
-          <p class="addon__value">1 литр</p>
-          <p class="addon__cost">100 Р.</p>
-          <a class="addon__buy" href="#">Заказать</a>
-        </li>
-        <li class="addon__item">
-          <h3 class="addon__item-title">Витамины</h3>
-          <p class="addon__value">1 упаковка (30 г)</p>
-          <p class="addon__cost">300 Р.</p>
-          <a class="addon__buy" href="#">Заказать</a>
-        </li>
-      </ul>
-      <div class="addon__wrapper">
-        <p class="addon__text">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
+      <div class="addon__row">
+        <ul class="addon__list">
+          <li class="addon__item">
+            <h3 class="addon__item-title">Сахарозаменитель</h3>
+            <p class="addon__value">1 упаковка (100 г)</p>
+            <p class="addon__cost">200 Р.</p>
+            <a class="addon__buy" href="#">Заказать</a>
+          </li>
+          <li class="addon__item">
+            <h3 class="addon__item-title">Питьевая вода</h3>
+            <p class="addon__value">5 литров</p>
+            <p class="addon__cost">50 Р.</p>
+            <a class="addon__buy" href="#">Заказать</a>
+          </li>
+          <li class="addon__item">
+            <h3 class="addon__item-title">Молоко</h3>
+            <p class="addon__value">1 литр</p>
+            <p class="addon__cost">100 Р.</p>
+            <a class="addon__buy" href="#">Заказать</a>
+          </li>
+          <li class="addon__item">
+            <h3 class="addon__item-title">Витамины</h3>
+            <p class="addon__value">1 упаковка (30 г)</p>
+            <p class="addon__cost">300 Р.</p>
+            <a class="addon__buy" href="#">Заказать</a>
+          </li>
+        </ul>
+        <div class="addon__wrapper">
+          <p class="addon__text">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
+        </div>
       </div>
     </section>
 
@@ -287,19 +289,19 @@
       <ul class="footer__list social">
         <li class="social__item">
           <a class="social__link" href="#">
-            <img src="img/icon-vk.svg" width="22" height="12" alt="">
+            <img class="social__image social__image--vk" src="img/icon-vk.svg" width="22" height="12" alt="">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="#">
-            <img src="img/icon-insta.svg" width="17" height="17" alt="">
+            <img class="social__image social__image--insta" src="img/icon-insta.svg" width="17" height="17" alt="">
             <span class="visually-hidden">Инстаграмм</span>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="#">
-            <img src="img/icon-fb.svg" width="10" height="19" alt="">
+            <img class="social__image social__image--fb" src="img/icon-fb.svg" width="10" height="19" alt="">
             <span class="visually-hidden">Фейсбук</span>
           </a>
         </li>

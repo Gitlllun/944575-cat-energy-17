@@ -1,17 +1,11 @@
-.addon__title {
-  display: inline-block;
+.addon {
   position: relative;
-  padding: 0 20px;
-  font-weight: normal;
-  font-size: 24px;
-  color: @black-two;
-  background-color: @white;
 
   &::after {
     content: "";
     position: absolute;
-    top: 14px;
-    left: 0;
+    top: 32px;
+    right: 0;
     width: 100vw;
     height: 3px;
     background-color: @leaf;
@@ -19,10 +13,20 @@
   }
 }
 
+.addon__title {
+  display: inline-block;
+  padding: 0 20px;
+  font-weight: normal;
+  font-size: 24px;
+  color: @black-two;
+  background-color: @white;
+}
+
 .addon__list {
   display: flex;
   flex-direction: column;
   margin: 0;
+  margin-bottom: 40px;
   padding: 0 20px;
   list-style: none;
 }
@@ -30,10 +34,10 @@
 .addon__item {
   display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid @gray-three;
+  border-top: 1px solid @gray-four;
 
   &:last-child {
-    border-bottom: 1px solid @gray-three;
+    border-bottom: 1px solid @gray-four;
   }
 }
 
@@ -61,7 +65,7 @@
 
 .addon__buy {
   width: 100%;
-  padding: 11px 20px;
+  padding: 10px 20px;
   margin: 15px auto;
   font-size: 16px;
   line-height: 1.25;
@@ -109,14 +113,16 @@
 //ПЛАНШЕТ//
 
 @media (min-width: @tablet-width) {
+  .addon {
+    &::after {
+      top: 50px;
+    }
+  }
+
   .addon__title {
     font-size: 36px;
     margin-left: 30px;
-
-    &::after {
-      top: 20px;
-      left: -30px;
-    }
+    padding: 0 37px;
   }
 
   .addon__list {
@@ -127,8 +133,13 @@
   .addon__item {
     padding: 0 38px;
     align-items: center;
+    border-top: 1px solid @gray-three;
     border-left: 1px solid @gray-three;
     border-right: 1px solid @gray-three;
+
+    &:last-child {
+      border-bottom: 1px solid @gray-three;
+    }
   }
 
   .addon__item-title {
@@ -170,9 +181,9 @@
   .addon__text {
     margin: 0;
     margin-left: auto;
+    margin-right: 125px;
     padding-top: 75px;
-    padding-right: 125px;
-    width: 169px;
+    width: 170px;
     text-align: left;
 
     &::before {
@@ -181,4 +192,83 @@
       transform: translateX(0%);
     }
   }
+}
+
+//ДЕСКТОП//
+
+@media (min-width: @desktop-width) {
+  .addon {
+    &::after {
+      top: 50px;
+    }
+  }
+
+  .addon__row {
+    display: flex;
+    width: 1220px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+
+  .addon__title {
+    position: relative;
+    right: -50%;
+    margin-left: -650px;
+  }
+
+  .addon__list {
+    padding: 0;
+  }
+
+  .addon__item {
+    padding: 0;
+    border-top: 1px solid @gray-four;
+    border-left: none;
+    border-right: none;
+
+    &:last-child {
+      border-bottom: 1px solid @gray-four;
+    }
+  }
+
+  .addon__item-title {
+    width: 310px;
+    flex-grow: 0;
+  }
+
+  .addon__value {
+    width: 150px;
+    text-align: left;
+  }
+
+  .addon__cost {
+    width: 110px;
+  }
+
+  .addon__buy {
+    width: 205px;
+    margin: 0;
+    margin-left: 40px;
+  }
+
+  .addon__wrapper {
+    margin: 0;
+    margin-left: auto;
+    width: 245px;
+    margin-bottom: 85px;
+    background-image: url(../img/gift-photo-desktop@1x.jpg);
+  }
+
+  .addon__text {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 190px;
+  }
+
+
+
+
+
+
 }
