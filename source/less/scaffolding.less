@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   min-width: 320px;
   margin: 0;
@@ -14,4 +20,30 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 1.67;
+  color: @black-two;
+  font-weight: normal;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    max-width: 768px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    max-width: 1300px;
+    padding: 0 40px;
+  }
 }

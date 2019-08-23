@@ -1,24 +1,15 @@
-.header {
+.header__container {
   display: flex;
   flex-direction: column;
+  padding: 0;
+  border-bottom: 1px solid @gray-three;
 }
 
 .header__logo {
-  display: flex;
-  flex-direction: column;
+  display: block;
   width: 191px;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 15px;
-
-  &:hover[href],
-  &:focus[href] {
-    opacity: 0.8;
-  }
-
-  &:active[href] {
-    opacity: 0.6;
-  }
+  height: 39px;
+  margin: 11px auto 15px 20px;
 }
 
 .header__logo-image {
@@ -26,17 +17,19 @@
   height: 39px;
 }
 
-//ПЛАНШЕТ//
-
 @media (min-width: @tablet-width) {
   .header {
+    padding: 24px 0 0 0;
+  }
+
+  .header__container {
     flex-direction: row;
-    justify-content: space-between;
+    border: none;
+    padding: 0 30px;
   }
 
   .header__logo {
-    margin-top: 24px;
-    margin-left: 30px;
+    margin: 0;
     width: 174px;
     height: 59px;
 
@@ -55,15 +48,16 @@
 
 @media (min-width: @desktop-width) {
   .header {
-    width: 1220px;
-    padding: 0 30px;
-    margin: 0 auto;
+    padding: 54px 0 0 0;
   }
 
   .header__logo {
     margin: 0;
-    margin-top: 53px;
     width: 203px;
+  }
+
+  .header__container {
+    padding: 0 40px;
   }
 
   .header__logo-image {
@@ -71,4 +65,3 @@
     height: 60px;
   }
 }
-

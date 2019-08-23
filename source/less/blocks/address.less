@@ -1,10 +1,11 @@
-.address__wrapper {
+.address {
+  background-color: @white;
+}
+
+.address__container {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0 20px;
   background-color: @white;
   z-index: 3;
 
@@ -84,15 +85,11 @@
 
   .address__text {
     width: 195px;
-    margin: 65px 0 60px 0;
+    margin: 65px 0 60px auto;
     padding-right: 40px;
     font-size: 16px;
     line-height: 1.25;
     text-align: right;
-  }
-
-  .address__wrapper {
-    padding: 0 30px;
   }
 
   .address__city {
@@ -127,26 +124,28 @@
     position: relative;
   }
 
-  .address__wrapper {
+  .address__container {
     position: absolute;
     padding: 0;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     margin-top: 95px;
-    margin-left: -335px;
+    margin-left: -325px;
     justify-content: stretch;
     background-color: @white;
   }
 
   .address__cooperation {
+    width: 285px;
     margin: 0;
-    padding: 70px 40px;
+    padding: 70px 50px 62px 76px;
     z-index: 3;
   }
 
   .address__text {
+    width: 290px;
     margin: 0;
-    padding: 70px 40px;
+    padding: 70px 90px 59px 45px;
     text-align: left;
     z-index: 3;
   }

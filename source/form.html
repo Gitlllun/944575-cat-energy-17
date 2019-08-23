@@ -44,6 +44,7 @@
       <p class="application__text">Заполните анкету и мы подберем <br> программу питания для вашего кота</p>
       <form class="application__form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="application__item">
+          <div class="application__item-wrapper">
           <div class="application__info">
             <label class="application__info-label form__label">Имя:*
               <input class="application__info-input" type="text" placeholder="Барсик">
@@ -69,10 +70,11 @@
               <label for="choice-hint" class="application__choice-label form__label">Не знаю (Нужен ваш совет)</label>
             </div>
           </div>
+        </div>
         </fieldset>
 
 
-        <fieldset class="application__item">
+        <fieldset class="application__item application__item--line">
           <legend class="application__title">Контактные данные
             <span class="application__title-comment">(владельца кота)</span>
           </legend>
@@ -87,7 +89,7 @@
         </fieldset>
 
 
-        <fieldset class="application__item">
+        <fieldset class="application__item application__item--line">
           <legend class="application__title">Комментарий</legend>
           <div class="application__comment">
             <textarea class="application__comment-area" name="" rows="5" cols="8"
@@ -95,7 +97,7 @@
           </div>
         </fieldset>
 
-        <fieldset class="application__item">
+        <fieldset class="application__item application__item--line">
           <legend class="application__title">Дополнительно</legend>
           <div class="application__addon">
 
@@ -178,6 +180,8 @@
       </a>
     </div>
   </footer>
+
+  <script src="js/picturefill.js"></script>
 
   <script>
     var navMain = document.querySelector('.main-nav');
