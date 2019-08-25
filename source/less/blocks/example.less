@@ -140,7 +140,7 @@
   border-radius: 3px;
   text-indent: -1000px;
   overflow: hidden;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .example__cats {
@@ -295,7 +295,7 @@
       width: 50%;
       overflow: hidden;
       background-image: linear-gradient(to bottom, @white, @white 169px, #f2f2f2 169px, #f2f2f2);
-      transition: all .3s ease;
+      transition: all 0.3s ease;
     }
 
     &--after {
@@ -324,7 +324,7 @@
 
     font-size: 20px;
     line-height: 1;
-    border-bottom: 1px dotted rgba(0, 0, 0, .23);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.23);
   }
 
   .example__range {
@@ -351,7 +351,7 @@
     background-color: @white;
     border: 1px solid @gray-four;
     border-radius: 50%;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .15);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
 
     &::before {
@@ -391,12 +391,11 @@
 @media (min-width: @desktop-width) {
   .example {
     padding: 0;
-    background: linear-gradient(to bottom, #ffffff 0, #ffffff 174px, transparent 174px, transparent 100%), linear-gradient(to left, #eaeaea 0, #eaeaea 50%, #f2f2f2 50%, #f2f2f2 100%);
+    background: linear-gradient(to bottom, #ffffff 0, #ffffff 134px, transparent 134px, transparent 100%), linear-gradient(to left, #eaeaea 0, #eaeaea 50%, #f2f2f2 50%, #f2f2f2 100%);
 
     &::before {
       display: none;
     }
-
   }
 
   .example__title {

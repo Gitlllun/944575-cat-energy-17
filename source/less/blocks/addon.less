@@ -1,274 +1,257 @@
-// .addon {
-//   position: relative;
+.addon__title {
+  display: inline-block;
+  padding-right: 24px;
+  font-weight: normal;
+  font-size: 24px;
+  color: @black-two;
+  background-color: @white;
+  position: relative;
 
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 32px;
-//     right: 0;
-//     width: 100vw;
-//     height: 3px;
-//     background-color: @leaf;
-//     z-index: -1;
-//   }
-// }
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 14px;
+    left: 0;
+    width: 100vw;
+    height: 3px;
+    background-color: @leaf;
+    z-index: -1;
+  }
+}
 
-// .addon__title {
-//   display: inline-block;
-//   padding: 0 20px;
-//   font-weight: normal;
-//   font-size: 24px;
-//   color: @black-two;
-//   background-color: @white;
-// }
+.addon__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  list-style: none;
+}
 
-// .addon__list {
-//   display: flex;
-//   flex-direction: column;
-//   margin: 0;
-//   margin-bottom: 40px;
-//   padding: 0 20px;
-//   list-style: none;
-// }
+.addon__item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -1px;
+  border: solid @gray-four;
+  border-width: 1px 0;
+}
 
-// .addon__item {
-//   display: flex;
-//   flex-wrap: wrap;
-//   border-top: 1px solid @gray-four;
+.addon__item-title {
+  width: 100%;
+  margin: 15px auto;
+  font-size: 16px;
+  color: @black-three;
+  font-weight: normal;
+  text-transform: uppercase;
+}
 
-//   &:last-child {
-//     border-bottom: 1px solid @gray-four;
-//   }
-// }
+.addon__value {
+  margin: 0 auto;
+  padding-right: 10px;
+  width: 50%;
+  font-family: "Arial", sans-serif;
+}
 
-// .addon__item-title {
-//   width: 100%;
-//   margin: 15px auto;
-//   font-size: 16px;
-//   color: @black-three;
-//   font-weight: normal;
-//   text-transform: uppercase;
-// }
+.addon__cost {
+  margin: 0 auto;
+  width: 50%;
+  text-align: right;
+  font-family: "Arial", sans-serif;
+}
 
-// .addon__value {
-//   margin: 0 auto;
-//   width: 50%;
-//   font-family: "Arial", sans-serif;
-// }
+.addon__buy {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: @white;
+  background-color: @leaf;
+}
 
-// .addon__cost {
-//   margin: 0 auto;
-//   width: 50%;
-//   text-align: right;
-//   font-family: "Arial", sans-serif;
-// }
+.addon__wrapper {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  min-height: 289px;
+  background-color: @leaf;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-// .addon__buy {
-//   width: 100%;
-//   padding: 10px 20px;
-//   margin: 15px auto;
-//   font-size: 16px;
-//   line-height: 1.25;
-//   text-transform: uppercase;
-//   text-align: center;
-//   text-decoration: none;
-//   color: @white;
-//   background-color: @leaf;
-// }
+.addon__text {
+  margin: 0 auto;
+  padding-top: 190px;
+  width: 58%;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  color: @white;
 
-// .addon__wrapper {
-//   position: relative;
-//   margin: 0 20px;
-//   margin-bottom: 35px;
-//   min-height: 289px;
-//   background-color: @leaf;
-//   background-image: url(../img/gift-photo-mobile@1x.jpg);
-//   background-size: cover;
-//   background-repeat: no-repeat;
-// }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 61px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
+}
 
-// .addon__text {
-//   margin: 0 auto;
-//   padding-top: 190px;
-//   width: 58%;
-//   text-align: center;
-//   font-family: "Arial", sans-serif;
-//   font-size: 16px;
-//   line-height: 1.25;
-//   color: @white;
+//ПЛАНШЕТ//
 
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 65px;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     width: 56px;
-//     height: 61px;
-//     background-image: url("../img/icon-gift.svg");
-//     background-repeat: no-repeat;
-//   }
-// }
+@media (min-width: @tablet-width) {
+  .addon__title {
+    font-size: 36px;
+    padding: 0 37px;
 
-// //ПЛАНШЕТ//
+    &::after {
+      top: 22px;
+    }
 
-// @media (min-width: @tablet-width) {
-//   .addon {
-//     &::after {
-//       top: 50px;
-//     }
-//   }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 0;
+      width: 100vw;
+      height: 3px;
+      background-color: @leaf;
+      z-index: -1;
+    }
+  }
 
-//   .addon__title {
-//     font-size: 36px;
-//     margin-left: 30px;
-//     padding: 0 37px;
-//   }
+  .addon__list {
+    margin: 0;
+    margin-bottom: 70px;
+  }
 
-//   .addon__list {
-//     padding: 0 30px;
-//     margin-bottom: 70px;
-//   }
+  .addon__item {
+    padding: 0 38px;
+    align-items: center;
+    border: 1px solid @gray-three;
+  }
 
-//   .addon__item {
-//     padding: 0 38px;
-//     align-items: center;
-//     border-top: 1px solid @gray-three;
-//     border-left: 1px solid @gray-three;
-//     border-right: 1px solid @gray-three;
+  .addon__item-title {
+    width: auto;
+    flex-grow: 1;
+    margin: 27px 0;
+    font-size: 20px;
+  }
 
-//     &:last-child {
-//       border-bottom: 1px solid @gray-three;
-//     }
-//   }
+  .addon__value {
+    width: 245px;
+    margin: 0;
+    padding-left: 20px;
+    text-align: right;
+    font-size: 16px;
+    line-height: 1.25;
+  }
 
-//   .addon__item-title {
-//     width: auto;
-//     flex-grow: 1;
-//     margin: 27px 0;
-//     font-size: 20px;
-//   }
+  .addon__cost {
+    margin: 0;
+    padding-left: 20px;
+    width: 74px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
 
-//   .addon__value {
-//     width: 245px;
-//     margin: 0;
-//     padding-left: 20px;
-//     text-align: right;
-//     font-size: 16px;
-//     line-height: 1.25;
-//   }
+  .addon__buy {
+    margin-bottom: 28px;
+  }
 
-//   .addon__cost {
-//     margin: 0;
-//     padding-left: 20px;
-//     width: 74px;
-//     font-size: 16px;
-//     line-height: 1.25;
-//   }
+  .addon__wrapper {
+    width: 708px;
+    margin-bottom: 75px;
+    min-height: 200px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
 
-//   .addon__buy {
-//     margin: 0;
-//     margin-bottom: 28px;
-//   }
+  .addon__text {
+    margin: 0;
+    margin-left: auto;
+    margin-right: 125px;
+    padding-top: 75px;
+    width: 170px;
+    text-align: left;
 
-//   .addon__wrapper {
-//     margin: 0 30px;
-//     margin-bottom: 75px;
-//     min-height: 200px;
-//     background-image: url(../img/gift-photo-tablet@1x.jpg);
-//   }
+    &::before {
+      top: 65px;
+      left: 90px;
+      transform: translateX(0%);
+    }
+  }
+}
 
-//   .addon__text {
-//     margin: 0;
-//     margin-left: auto;
-//     margin-right: 125px;
-//     padding-top: 75px;
-//     width: 170px;
-//     text-align: left;
+//ДЕСКТОП//
 
-//     &::before {
-//       top: 65px;
-//       left: 90px;
-//       transform: translateX(0%);
-//     }
-//   }
-// }
+@media (min-width: @desktop-width) {
+  .addon {
+    &::after {
+      top: 50px;
+    }
+  }
 
-// //ДЕСКТОП//
+  .addon__row {
+    display: flex;
+    margin-bottom: 85px;
+  }
 
-// @media (min-width: @desktop-width) {
-//   .addon {
-//     &::after {
-//       top: 50px;
-//     }
-//   }
+  .addon__list {
+    margin-bottom: 0;
+  }
 
-//   .addon__row {
-//     display: flex;
-//     width: 1220px;
-//     padding: 0 30px;
-//     margin: 0 auto;
-//   }
+  .addon__item {
+    border-color: @gray-four;
+    border-width: 1px 0;
+  }
 
-//   .addon__title {
-//     position: relative;
-//     right: -50%;
-//     margin-left: -650px;
-//   }
+  .addon__item-title {
+    margin: 15px 0 16px 0;
+    padding: 10px 0;
+    width: 310px;
+  }
 
-//   .addon__list {
-//     padding: 0;
-//   }
+  .addon__value {
+    width: 170px;
+    padding: 10px;
+    padding-right: 0;
+    text-align: left;
+  }
 
-//   .addon__item {
-//     padding: 0;
-//     border-top: 1px solid @gray-four;
-//     border-left: none;
-//     border-right: none;
+  .addon__cost {
+    padding: 10px;
+    padding-right: 0;
+    width: 100px;
+  }
 
-//     &:last-child {
-//       border-bottom: 1px solid @gray-four;
-//     }
-//   }
+  .addon__buy {
+    width: 245px;
+    margin: 0;
+    margin-left: 40px;
+  }
 
-//   .addon__item-title {
-//     width: 310px;
-//     flex-grow: 0;
-//   }
+  .addon__wrapper {
+    margin: 0;
+    margin-left: auto;
+    width: 245px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
 
-//   .addon__value {
-//     width: 170px;
-//     text-align: left;
-//   }
-
-//   .addon__cost {
-//     width: 100px;
-//   }
-
-//   .addon__buy {
-//     width: 245px;
-//     margin: 0;
-//     margin-left: 40px;
-//   }
-
-//   .addon__wrapper {
-//     margin: 0;
-//     margin-left: auto;
-//     width: 245px;
-//     margin-bottom: 85px;
-//     background-image: url(../img/gift-photo-desktop@1x.jpg);
-//   }
-
-//   .addon__text {
-//     text-align: center;
-//     margin: 0 auto;
-//     padding: 0;
-//     padding-top: 190px;
-//   }
-
-
-
-
-
-
-// }
+  .addon__text {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 190px;
+  }
+}

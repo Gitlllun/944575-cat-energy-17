@@ -1,31 +1,30 @@
-// .main__title {
-//   margin: 0;
-//   padding: 22px 20px;
-//   font-size: 36px;
-//   line-height: 1.67;
-//   color: @black-two;
-//   font-weight: normal;
+.main {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+}
 
-//   border-top: 1px solid @gray-three;
-// }
+.main__title {
+  margin: 0;
+  padding: 20px 0;
+}
 
-// //ПЛАНШЕТ//
+//ПЛАНШЕТ//
 
-// @media (min-width: @tablet-width) {
-//   .main__title {
-//     padding: 65px 30px 15px 30px;
-//     font-size: 60px;
-//     line-height: 1;
-//     border: none;
-//   }
-// }
+@media (min-width: @tablet-width) {
+  .main__title {
+    padding: 65px 0 15px 0;
+    font-size: 60px;
+    line-height: 1;
+    border: none;
+  }
+}
 
-// //ДЕСКТОП//
+//ДЕСКТОП//
 
-// @media (min-width: @desktop-width) {
-//   .main__title {
-//     width: 1280px;
-//     padding: 0 30px;
-//     margin: 83px auto 75px auto;
-//   }
-// }
+@media (min-width: @desktop-width) {
+  .main__title {
+    padding: 0;
+    margin: 83px 0 75px 0;
+  }
+}
