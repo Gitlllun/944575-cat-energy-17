@@ -30,13 +30,14 @@
 }
 
 .example__item {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  margin: 0 32px 0 0;
+  margin: 0 auto;
   width: 124px;
 
   &:nth-child(2n) {
-    margin-right: 0;
+    margin-left: 32px;
   }
 }
 
@@ -229,8 +230,12 @@
   }
 
   .example__item {
+    flex-grow: 0;
     width: 162px;
-    margin: 0 42px 0 0;
+
+    &:nth-child(2n) {
+      margin-left: 42px;
+    }
   }
 
   .example__text-top {
