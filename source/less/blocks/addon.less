@@ -1,11 +1,18 @@
-.addon {
+.addon__title {
+  display: inline-block;
+  padding-right: 24px;
+  font-weight: normal;
+  font-size: 24px;
+  color: @black-two;
+  background-color: @white;
   position: relative;
 
   &::after {
     content: "";
     position: absolute;
-    top: 32px;
-    right: 0;
+    display: block;
+    top: 14px;
+    left: 0;
     width: 100vw;
     height: 3px;
     background-color: @leaf;
@@ -13,32 +20,21 @@
   }
 }
 
-.addon__title {
-  display: inline-block;
-  padding: 0 20px;
-  font-weight: normal;
-  font-size: 24px;
-  color: @black-two;
-  background-color: @white;
-}
-
 .addon__list {
   display: flex;
   flex-direction: column;
   margin: 0;
   margin-bottom: 40px;
-  padding: 0 20px;
+  padding: 0;
   list-style: none;
 }
 
 .addon__item {
   display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid @gray-four;
-
-  &:last-child {
-    border-bottom: 1px solid @gray-four;
-  }
+  margin-top: -1px;
+  border: solid @gray-four;
+  border-width: 1px 0;
 }
 
 .addon__item-title {
@@ -52,6 +48,7 @@
 
 .addon__value {
   margin: 0 auto;
+  padding-right: 10px;
   width: 50%;
   font-family: "Arial", sans-serif;
 }
@@ -66,7 +63,7 @@
 .addon__buy {
   width: 100%;
   padding: 10px 20px;
-  margin: 15px auto;
+  margin: 15px 0;
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -78,11 +75,12 @@
 
 .addon__wrapper {
   position: relative;
-  margin: 0 20px;
+  width: 280px;
+  margin: 0 auto;
   margin-bottom: 35px;
   min-height: 289px;
   background-color: @leaf;
-  background-image: url(../img/gift-photo-mobile@1x.jpg);
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -113,33 +111,35 @@
 //ПЛАНШЕТ//
 
 @media (min-width: @tablet-width) {
-  .addon {
+  .addon__title {
+    font-size: 36px;
+    padding: 0 37px;
+
     &::after {
-      top: 50px;
+      top: 22px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 0;
+      width: 100vw;
+      height: 3px;
+      background-color: @leaf;
+      z-index: -1;
     }
   }
 
-  .addon__title {
-    font-size: 36px;
-    margin-left: 30px;
-    padding: 0 37px;
-  }
-
   .addon__list {
-    padding: 0 30px;
+    margin: 0;
     margin-bottom: 70px;
   }
 
   .addon__item {
     padding: 0 38px;
     align-items: center;
-    border-top: 1px solid @gray-three;
-    border-left: 1px solid @gray-three;
-    border-right: 1px solid @gray-three;
-
-    &:last-child {
-      border-bottom: 1px solid @gray-three;
-    }
+    border: 1px solid @gray-three;
   }
 
   .addon__item-title {
@@ -167,15 +167,14 @@
   }
 
   .addon__buy {
-    margin: 0;
     margin-bottom: 28px;
   }
 
   .addon__wrapper {
-    margin: 0 30px;
+    width: 708px;
     margin-bottom: 75px;
     min-height: 200px;
-    background-image: url(../img/gift-photo-tablet@1x.jpg);
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
   }
 
   .addon__text {
@@ -205,48 +204,39 @@
 
   .addon__row {
     display: flex;
-    width: 1220px;
-    padding: 0 30px;
-    margin: 0 auto;
-  }
-
-  .addon__title {
-    position: relative;
-    right: -50%;
-    margin-left: -650px;
+    margin-bottom: 85px;
   }
 
   .addon__list {
-    padding: 0;
+    margin-bottom: 0;
   }
 
   .addon__item {
-    padding: 0;
-    border-top: 1px solid @gray-four;
-    border-left: none;
-    border-right: none;
-
-    &:last-child {
-      border-bottom: 1px solid @gray-four;
-    }
+    border-color: @gray-four;
+    border-width: 1px 0;
   }
 
   .addon__item-title {
+    margin: 15px 0 16px 0;
+    padding: 10px 0;
     width: 310px;
-    flex-grow: 0;
   }
 
   .addon__value {
-    width: 150px;
+    width: 170px;
+    padding: 10px;
+    padding-right: 0;
     text-align: left;
   }
 
   .addon__cost {
-    width: 110px;
+    padding: 10px;
+    padding-right: 0;
+    width: 100px;
   }
 
   .addon__buy {
-    width: 205px;
+    width: 245px;
     margin: 0;
     margin-left: 40px;
   }
@@ -255,8 +245,7 @@
     margin: 0;
     margin-left: auto;
     width: 245px;
-    margin-bottom: 85px;
-    background-image: url(../img/gift-photo-desktop@1x.jpg);
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
   }
 
   .addon__text {
@@ -265,10 +254,4 @@
     padding: 0;
     padding-top: 190px;
   }
-
-
-
-
-
-
 }
