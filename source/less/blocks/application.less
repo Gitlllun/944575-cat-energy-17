@@ -37,11 +37,20 @@
   font-size: 16px;
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
-  border: 1px solid @gray-four;
+  border: 1px solid rgba(205, 205, 205, 0.5);
 
   &::placeholder {
     color: @gray-two;
-    opacity: 1;
+  }
+
+  &:hover {
+    border-color: @gray-four;
+  }
+
+  &:focus {
+    border-color: @gray-two;
+    box-shadow: inset 0 0 0 1px @gray-two;
+    outline: 0;
   }
 }
 
@@ -71,6 +80,16 @@
     border: 1px solid @gray-four;
     border-radius: 50%;
   }
+
+  &:hover {
+    &::before {
+      border-color: #bababa;
+    }
+  }
+}
+
+.application__choice-input:disabled ~ .application__choice-label {
+  opacity: 0.3;
 }
 
 .application__choice-input:checked ~ .application__choice-label::before {
@@ -120,25 +139,17 @@
     position: absolute;
     background-repeat: no-repeat;
   }
+}
 
+.application__contacts-image {
   &--mail {
-    &::before {
-      top: 15px;
-      right: 15px;
-      width: 18px;
-      height: 14px;
-      background-image: url("../../img/icon-mail.svg");
-    }
+    position: absolute;
+    right: 15px;
   }
 
   &--phone {
-    &::before {
-      top: 13px;
-      right: 13px;
-      width: 21px;
-      height: 21px;
-      background-image: url("../../img/icon-phone.svg");
-    }
+    position: absolute;
+    right: 12px;
   }
 }
 
@@ -149,12 +160,26 @@
   font-size: 16px;
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
-  border: 1px solid @gray-four;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+  outline: none;
 
   &::placeholder {
     color: @gray-two;
-    opacity: 1;
   }
+
+  &:hover {
+    border-color: @gray-four;
+  }
+
+  &:focus {
+    border-color: @gray-two;
+    box-shadow: inset 0 0 0 1px @gray-two;
+    outline: 0;
+  }
+}
+
+.application__contacts-input:focus ~ .application__contacts-image {
+  fill: @leaf;
 }
 
 .application__comment {
@@ -167,11 +192,20 @@
   font-size: 16px;
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
-  border: 1px solid @gray-four;
+  border: 1px solid rgba(205, 205, 205, 0.5);
 
   &::placeholder {
     color: @gray-two;
-    opacity: 1;
+  }
+
+  &:hover {
+    border-color: @gray-four;
+  }
+
+  &:focus {
+    border-color: @gray-two;
+    box-shadow: inset 0 0 0 1px @gray-two;
+    outline: 0;
   }
 }
 
@@ -192,6 +226,16 @@
     height: 28px;
     border: 1px solid @gray-four;
   }
+
+  &:hover {
+    &::before {
+      border-color: #bababa;
+    }
+  }
+}
+
+.application__addon-input:disabled ~ .application__addon-label {
+  opacity: 0.3;
 }
 
 .application__addon-input:checked ~ .application__addon-label::before {
@@ -306,11 +350,9 @@
 
   .application__comment-area {
     margin: 0 40px;
-
-    &::placeholder {
-      font-size: 20px;
-      line-height: 1;
-    }
+    padding: 17px;
+    font-size: 20px;
+    line-height: 1.5;
   }
 
   .application__contacts {
@@ -405,6 +447,7 @@
 
   .application__contacts {
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0;
     margin-bottom: 50px;
     padding: 0;
@@ -418,7 +461,7 @@
       margin-bottom: 20px;
     }
 
-    &--phone {
+    &:nth-child(2n) {
       margin-left: 80px;
     }
   }
