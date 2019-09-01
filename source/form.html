@@ -85,11 +85,17 @@
               <span class="application__title-comment">(владельца кота)</span>
             </legend>
             <div class="application__contacts">
-              <label class="application__contacts-label application__contacts-label--mail form__label">E-mail:*
-                <input class="application__contacts-input" type="email" name="" placeholder="kuklachev@gmail.com">
+              <label class="application__contacts-label form__label">E-mail:*
+                <input class="application__contacts-input" type="email" placeholder="kuklachev@gmail.com">
+                <svg class="application__contacts-image application__contacts-image--mail" width="17" height="13">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
               </label>
-              <label class="application__contacts-label application__contacts-label--phone form__label">Телефон:*
-                <input class="application__contacts-input" type="tel" name="" placeholder="8 (960) 900-60-90">
+              <label class="application__contacts-label form__label">Телефон:*
+                <input class="application__contacts-input" type="tel" placeholder="8 (960) 900-60-90">
+                <svg class="application__contacts-image application__contacts-image--phone" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
               </label>
             </div>
           </fieldset>
@@ -98,7 +104,7 @@
           <fieldset class="application__item">
             <legend class="application__title">Комментарий</legend>
             <div class="application__comment">
-              <textarea class="application__comment-area" name="" rows="5" cols="8"
+              <textarea class="application__comment-area" rows="5" cols="8"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
@@ -108,7 +114,7 @@
             <div class="application__addon">
 
               <div class="application__addon-checkbox">
-                <input class="application__addon-input form__input" type="checkbox" id="addon-1">
+                <input class="application__addon-input form__input" type="checkbox" id="addon-1" checked>
                 <label for="addon-1" class="application__addon-label form__label">Сахарозаменитель</label>
               </div>
 
@@ -208,6 +214,8 @@
 
   <script src="js/script.js"></script>
   <script src="js/picturefill.js"></script>
+  <script src="js/svg4everybody.js"></script>
+  <script>svg4everybody();</script>
 
 </body>
 
