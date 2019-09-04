@@ -4,8 +4,8 @@
 }
 
 .application__text {
-  margin: 0;
-  margin-bottom: 35px;
+  margin-top: -4px;
+  margin-bottom: 32px;
   line-height: 1.29;
   color: @black-two;
   text-transform: uppercase;
@@ -24,16 +24,17 @@
 .application__info {
   display: flex;
   flex-direction: column;
+  margin-bottom: 16px;
 }
 
 .application__info-label {
-  margin: 14px 0;
+  margin: 7px 0;
 }
 
 .application__info-input {
   flex-grow: 1;
-  margin-left: 15px;
-  padding: 13px 15px;
+  margin-left: 14px;
+  padding: 10px 14px 9px;
   font-size: 16px;
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
@@ -56,23 +57,24 @@
 
 .application__choice {
   margin: 0 -20px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border: 1px solid @gray-three;
 }
 
 .application__choice-radio {
   display: flex;
   flex-direction: column;
+  padding: 6px 0;
 }
 
 .application__choice-label {
   position: relative;
-  padding: 12px 0 12px 46px;
+  padding: 6px 0 6px 46px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 6px;
+    top: 0;
     left: 0;
     padding: 8px;
     width: 30px;
@@ -101,7 +103,7 @@
   display: inline-block;
   font-size: 24px;
   color: @black-two;
-  padding: 30px 25px 30px 0;
+  padding: 28px 21px 34px 0;
   background-color: @white;
   position: relative;
 
@@ -156,7 +158,7 @@
 .application__contacts-input {
   flex-grow: 1;
   margin-left: 9px;
-  padding: 10px 50px 10px 15px;
+  padding: 10px 50px 9px 15px;
   font-size: 16px;
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
@@ -187,7 +189,7 @@
 }
 
 .application__comment-area {
-  padding: 13px;
+  padding: 11px 13px 18px 13px;
   width: 100%;
   font-size: 16px;
   text-transform: uppercase;
@@ -212,18 +214,23 @@
 .application__addon {
   display: flex;
   flex-direction: column;
+  margin-top: -5px;
+}
+
+.application__addon-checkbox {
+  padding: 6px 0;
 }
 
 .application__addon-label {
-  padding: 12px 0 12px 46px;
+  padding: 6px 0 6px 46px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 6px;
+    top: 0;
     left: 0;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     border: 1px solid @gray-four;
   }
 
@@ -249,12 +256,11 @@
 .application__send {
   display: flex;
   flex-direction: column;
-  margin-top: 35px;
+  margin-top: 30px;
   padding: 0 20px;
 }
 
 .application__button {
-  margin-bottom: 20px;
   padding: 10px 20px;
   font-size: 16px;
   line-height: 1.25;
@@ -275,7 +281,7 @@
 }
 
 .application__text-field {
-  margin-bottom: 35px;
+  margin: 21px 0 33px;
   font-family: "Arial", sans-serif;
   line-height: 1.14;
   text-align: center;
