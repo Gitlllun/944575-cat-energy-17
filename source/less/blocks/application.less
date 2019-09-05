@@ -36,12 +36,15 @@
   margin-left: 14px;
   padding: 10px 14px 9px;
   font-size: 16px;
+  color: @gray-two;
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
   border: 1px solid rgba(205, 205, 205, 0.5);
 
+
   &::placeholder {
     color: @gray-two;
+    opacity: 1;
   }
 
   &:hover {
@@ -52,6 +55,11 @@
     border-color: @gray-two;
     box-shadow: inset 0 0 0 1px @gray-two;
     outline: 0;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: #ff8282;
+    box-shadow: inset 0 0 0 1px #ff8282;
   }
 }
 
@@ -146,19 +154,23 @@
 .application__contacts-image {
   &--mail {
     position: absolute;
+    top: 15px;
     right: 15px;
   }
 
   &--phone {
     position: absolute;
+    top: 12px;
     right: 12px;
   }
 }
 
 .application__contacts-input {
   flex-grow: 1;
+  width: 50%;
+  box-sizing: content-box;
   margin-left: 9px;
-  padding: 10px 50px 9px 15px;
+  padding: 10px 47px 9px 15px;
   font-size: 16px;
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
@@ -167,6 +179,7 @@
 
   &::placeholder {
     color: @gray-two;
+    opacity: 1;
   }
 
   &:hover {
@@ -178,10 +191,23 @@
     box-shadow: inset 0 0 0 1px @gray-two;
     outline: 0;
   }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: #ff8282;
+    box-shadow: inset 0 0 0 1px #ff8282;
+  }
 }
 
 .application__contacts-input:focus ~ .application__contacts-image {
   fill: @leaf;
+}
+
+.application__contacts-input:invalid:not(:placeholder-shown) ~ .application__contacts-image {
+  fill: #ff8282;
+}
+
+.application__error {
+  display: none;
 }
 
 .application__comment {
@@ -198,6 +224,7 @@
 
   &::placeholder {
     color: @gray-two;
+    opacity: 1;
   }
 
   &:hover {
@@ -327,14 +354,10 @@
 
   .application__info-input {
     margin-left: 17px;
-    padding-top: 15px;
+    padding-top: 11px;
     padding-left: 18px;
-    padding-bottom: 11px;
-
-    &::placeholder {
-      font-size: 20px;
-      line-height: 1;
-    }
+    padding-bottom: 9px;
+    font-size: 20px;
   }
 
   .application__choice {
@@ -407,17 +430,22 @@
 
   .application__contacts-input {
     margin-left: 16px;
-    padding-top: 15px;
+    padding-top: 11px;
     padding-left: 17px;
-    padding-bottom: 11px;
-
-    &::placeholder {
-      font-size: 20px;
-    }
+    padding-bottom: 9px;
+    font-size: 20px;
   }
 
   .application__contacts-image {
-    right: 19px;
+    &--mail {
+      top: 20px;
+      right: 20px;
+    }
+
+    &--phone {
+      top: 17px;
+      right: 17px;
+    }
   }
 
   .application__addon {
@@ -492,7 +520,7 @@
 
   .application__item-wrapper {
     display: flex;
-    margin-bottom: 55px;
+    margin-bottom: 58px;
   }
 
   .application__info {
@@ -501,9 +529,9 @@
   }
 
   .application__choice {
-    margin: 14px 0;
+    margin: 10px 0;
     margin-left: 80px;
-    padding-top: 12px;
+    padding-top: 17px;
     width: 528px;
   }
 
