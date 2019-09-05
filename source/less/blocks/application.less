@@ -4,8 +4,8 @@
 }
 
 .application__text {
-  margin: 0;
-  margin-bottom: 35px;
+  margin-top: -4px;
+  margin-bottom: 32px;
   line-height: 1.29;
   color: @black-two;
   text-transform: uppercase;
@@ -24,23 +24,27 @@
 .application__info {
   display: flex;
   flex-direction: column;
+  margin-bottom: 16px;
 }
 
 .application__info-label {
-  margin: 14px 0;
+  margin: 7px 0;
 }
 
 .application__info-input {
   flex-grow: 1;
-  margin-left: 15px;
-  padding: 13px 15px;
+  margin-left: 14px;
+  padding: 10px 14px 9px;
   font-size: 16px;
+  color: @gray-two;
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
   border: 1px solid rgba(205, 205, 205, 0.5);
 
+
   &::placeholder {
     color: @gray-two;
+    opacity: 1;
   }
 
   &:hover {
@@ -52,27 +56,33 @@
     box-shadow: inset 0 0 0 1px @gray-two;
     outline: 0;
   }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: #ff8282;
+    box-shadow: inset 0 0 0 1px #ff8282;
+  }
 }
 
 .application__choice {
   margin: 0 -20px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border: 1px solid @gray-three;
 }
 
 .application__choice-radio {
   display: flex;
   flex-direction: column;
+  padding: 6px 0;
 }
 
 .application__choice-label {
   position: relative;
-  padding: 12px 0 12px 46px;
+  padding: 6px 0 6px 46px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 6px;
+    top: 0;
     left: 0;
     padding: 8px;
     width: 30px;
@@ -101,7 +111,7 @@
   display: inline-block;
   font-size: 24px;
   color: @black-two;
-  padding: 30px 25px 30px 0;
+  padding: 28px 21px 34px 0;
   background-color: @white;
   position: relative;
 
@@ -144,19 +154,23 @@
 .application__contacts-image {
   &--mail {
     position: absolute;
+    top: 15px;
     right: 15px;
   }
 
   &--phone {
     position: absolute;
+    top: 12px;
     right: 12px;
   }
 }
 
 .application__contacts-input {
   flex-grow: 1;
+  width: 50%;
+  box-sizing: content-box;
   margin-left: 9px;
-  padding: 10px 50px 10px 15px;
+  padding: 10px 47px 9px 15px;
   font-size: 16px;
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
@@ -165,6 +179,7 @@
 
   &::placeholder {
     color: @gray-two;
+    opacity: 1;
   }
 
   &:hover {
@@ -176,10 +191,23 @@
     box-shadow: inset 0 0 0 1px @gray-two;
     outline: 0;
   }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: #ff8282;
+    box-shadow: inset 0 0 0 1px #ff8282;
+  }
 }
 
 .application__contacts-input:focus ~ .application__contacts-image {
   fill: @leaf;
+}
+
+.application__contacts-input:invalid:not(:placeholder-shown) ~ .application__contacts-image {
+  fill: #ff8282;
+}
+
+.application__error {
+  display: none;
 }
 
 .application__comment {
@@ -187,7 +215,7 @@
 }
 
 .application__comment-area {
-  padding: 13px;
+  padding: 11px 13px 18px 13px;
   width: 100%;
   font-size: 16px;
   text-transform: uppercase;
@@ -196,6 +224,7 @@
 
   &::placeholder {
     color: @gray-two;
+    opacity: 1;
   }
 
   &:hover {
@@ -212,18 +241,23 @@
 .application__addon {
   display: flex;
   flex-direction: column;
+  margin-top: -5px;
+}
+
+.application__addon-checkbox {
+  padding: 6px 0;
 }
 
 .application__addon-label {
-  padding: 12px 0 12px 46px;
+  padding: 6px 0 6px 46px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 6px;
+    top: 0;
     left: 0;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     border: 1px solid @gray-four;
   }
 
@@ -249,13 +283,13 @@
 .application__send {
   display: flex;
   flex-direction: column;
-  margin-top: 35px;
+  margin-top: 30px;
   padding: 0 20px;
 }
 
 .application__button {
-  margin-bottom: 20px;
   padding: 10px 20px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.25;
   color: @white;
@@ -263,6 +297,7 @@
   text-decoration: none;
   text-align: center;
   background-color: @leaf;
+  border: none;
 
   &:hover,
   &:focus {
@@ -275,7 +310,7 @@
 }
 
 .application__text-field {
-  margin-bottom: 35px;
+  margin: 21px 0 33px;
   font-family: "Arial", sans-serif;
   line-height: 1.14;
   text-align: center;
@@ -286,7 +321,7 @@
 
 @media (min-width: @tablet-width) {
   .application {
-    margin-top: 50px;
+    margin-top: 35px;
   }
 
   .application__form {
@@ -297,7 +332,12 @@
     padding: 0;
   }
 
+  .application__item-wrapper {
+    margin-bottom: 75px;
+  }
+
   .application__text {
+    margin-bottom: 0;
     padding: 0 40px;
     font-size: 20px;
     line-height: 1.5;
@@ -305,23 +345,42 @@
 
   .application__info {
     padding: 0;
-    margin: 70px 40px 0 40px;
+    margin: 55px 37px 0 41px;
+  }
+
+  .application__info-label {
+    margin: 10px 0;
   }
 
   .application__info-input {
-    &::placeholder {
-      font-size: 20px;
-      line-height: 1;
-    }
+    margin-left: 17px;
+    padding-top: 11px;
+    padding-left: 18px;
+    padding-bottom: 9px;
+    font-size: 20px;
   }
 
   .application__choice {
-    margin: 72px 40px;
+    margin: 62px 37px 0 41px;
+    padding: 17px 0 18px 27px;
+  }
+
+  .application__choice-radio {
+    padding: 6px 0 7px;
+  }
+
+  .application__choice-label {
+    padding: 11px 0 9px 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+    }
   }
 
   .application__title {
     padding: 0 40px;
-    margin-bottom: 70px;
     font-size: 36px;
 
     &::before {
@@ -336,12 +395,12 @@
     }
 
     &::after {
-      top: 20px;
+      top: 22px;
     }
   }
 
   .application__comment {
-    margin-bottom: 70px;
+    margin-bottom: 65px;
   }
 
   .application__title-comment {
@@ -349,32 +408,58 @@
   }
 
   .application__comment-area {
-    margin: 0 40px;
-    padding: 17px;
+    margin: 76px 37px 0 40px;
+    padding: 10px 18px 12px;
     font-size: 20px;
     line-height: 1.5;
   }
 
   .application__contacts {
-    padding: 0 40px;
-    margin-bottom: 70px;
+    padding: 0 35px 0 40px;
+    margin: 66px 0 65px;
+  }
+
+  .application__contacts-label {
+    margin: 10px 0;
+  }
+
+  .application__contacts-label:first-child .application__contacts-input {
+    margin-left: 20px;
+    padding-left: 20px;
   }
 
   .application__contacts-input {
-    margin-left: 15px;
+    margin-left: 16px;
+    padding-top: 11px;
+    padding-left: 17px;
+    padding-bottom: 9px;
+    font-size: 20px;
+  }
+
+  .application__contacts-image {
+    &--mail {
+      top: 20px;
+      right: 20px;
+    }
+
+    &--phone {
+      top: 17px;
+      right: 17px;
+    }
   }
 
   .application__addon {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0 40px;
-    margin-bottom: 25px;
+    margin-top: 51px;
+    margin-bottom: 27px;
   }
 
   .application__addon-checkbox {
     width: 284px;
     margin-right: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     &:nth-child(2n) {
       margin-right: 0;
@@ -382,13 +467,13 @@
   }
 
   .application__addon-label {
-    padding: 12px 12px 12px 60px;
+    padding: 10px 12px 10px 58px;
 
     &::before {
       top: 0;
       left: 0;
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -398,7 +483,7 @@
     align-items: center;
     padding: 0 40px;
     margin: 0;
-    margin-bottom: 72px;
+    margin-bottom: 73px;
   }
 
   .application__button {
@@ -420,18 +505,22 @@
 //ДЕСКТОП//
 
 @media (min-width: @desktop-width) {
+  .application {
+    margin-top: 60px;
+  }
+
   .application__title {
     margin-left: -40px;
   }
 
   .application__text {
     padding: 0;
-    margin-bottom: 70px;
+    margin-bottom: 55px;
   }
 
   .application__item-wrapper {
     display: flex;
-    margin-bottom: 75px;
+    margin-bottom: 58px;
   }
 
   .application__info {
@@ -440,16 +529,16 @@
   }
 
   .application__choice {
-    margin: 14px 0;
+    margin: 10px 0;
     margin-left: 80px;
+    padding-top: 17px;
     width: 528px;
   }
 
   .application__contacts {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
     padding: 0;
   }
 
@@ -466,13 +555,18 @@
     }
   }
 
+  .application__comment {
+    margin-top: 76px;
+    margin-bottom: 67px;
+  }
+
   .application__comment-area {
     margin: 0;
   }
 
   .application__addon {
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 34px;
   }
 
   .application__addon-checkbox {
@@ -490,7 +584,7 @@
 
   .application__send {
     padding: 0;
-    margin-bottom: 70px;
+    margin-bottom: 87px;
   }
 
   .application__button {
