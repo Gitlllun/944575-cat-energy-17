@@ -262,6 +262,7 @@
 
 .application__button {
   padding: 10px 20px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.25;
   color: @white;
@@ -269,6 +270,7 @@
   text-decoration: none;
   text-align: center;
   background-color: @leaf;
+  border: none;
 
   &:hover,
   &:focus {
@@ -292,7 +294,7 @@
 
 @media (min-width: @tablet-width) {
   .application {
-    margin-top: 50px;
+    margin-top: 35px;
   }
 
   .application__form {
@@ -303,7 +305,12 @@
     padding: 0;
   }
 
+  .application__item-wrapper {
+    margin-bottom: 75px;
+  }
+
   .application__text {
+    margin-bottom: 0;
     padding: 0 40px;
     font-size: 20px;
     line-height: 1.5;
@@ -311,10 +318,19 @@
 
   .application__info {
     padding: 0;
-    margin: 70px 40px 0 40px;
+    margin: 55px 37px 0 41px;
+  }
+
+  .application__info-label {
+    margin: 10px 0;
   }
 
   .application__info-input {
+    margin-left: 17px;
+    padding-top: 15px;
+    padding-left: 18px;
+    padding-bottom: 11px;
+
     &::placeholder {
       font-size: 20px;
       line-height: 1;
@@ -322,12 +338,26 @@
   }
 
   .application__choice {
-    margin: 72px 40px;
+    margin: 62px 37px 0 41px;
+    padding: 17px 0 18px 27px;
+  }
+
+  .application__choice-radio {
+    padding: 6px 0 7px;
+  }
+
+  .application__choice-label {
+    padding: 11px 0 9px 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+    }
   }
 
   .application__title {
     padding: 0 40px;
-    margin-bottom: 70px;
     font-size: 36px;
 
     &::before {
@@ -342,12 +372,12 @@
     }
 
     &::after {
-      top: 20px;
+      top: 22px;
     }
   }
 
   .application__comment {
-    margin-bottom: 70px;
+    margin-bottom: 65px;
   }
 
   .application__title-comment {
@@ -355,32 +385,53 @@
   }
 
   .application__comment-area {
-    margin: 0 40px;
-    padding: 17px;
+    margin: 76px 37px 0 40px;
+    padding: 10px 18px 12px;
     font-size: 20px;
     line-height: 1.5;
   }
 
   .application__contacts {
-    padding: 0 40px;
-    margin-bottom: 70px;
+    padding: 0 35px 0 40px;
+    margin: 66px 0 65px;
+  }
+
+  .application__contacts-label {
+    margin: 10px 0;
+  }
+
+  .application__contacts-label:first-child .application__contacts-input {
+    margin-left: 20px;
+    padding-left: 20px;
   }
 
   .application__contacts-input {
-    margin-left: 15px;
+    margin-left: 16px;
+    padding-top: 15px;
+    padding-left: 17px;
+    padding-bottom: 11px;
+
+    &::placeholder {
+      font-size: 20px;
+    }
+  }
+
+  .application__contacts-image {
+    right: 19px;
   }
 
   .application__addon {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0 40px;
-    margin-bottom: 25px;
+    margin-top: 51px;
+    margin-bottom: 27px;
   }
 
   .application__addon-checkbox {
     width: 284px;
     margin-right: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     &:nth-child(2n) {
       margin-right: 0;
@@ -388,13 +439,13 @@
   }
 
   .application__addon-label {
-    padding: 12px 12px 12px 60px;
+    padding: 10px 12px 10px 58px;
 
     &::before {
       top: 0;
       left: 0;
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -404,7 +455,7 @@
     align-items: center;
     padding: 0 40px;
     margin: 0;
-    margin-bottom: 72px;
+    margin-bottom: 73px;
   }
 
   .application__button {
@@ -426,18 +477,22 @@
 //ДЕСКТОП//
 
 @media (min-width: @desktop-width) {
+  .application {
+    margin-top: 60px;
+  }
+
   .application__title {
     margin-left: -40px;
   }
 
   .application__text {
     padding: 0;
-    margin-bottom: 70px;
+    margin-bottom: 55px;
   }
 
   .application__item-wrapper {
     display: flex;
-    margin-bottom: 75px;
+    margin-bottom: 55px;
   }
 
   .application__info {
@@ -448,14 +503,14 @@
   .application__choice {
     margin: 14px 0;
     margin-left: 80px;
+    padding-top: 12px;
     width: 528px;
   }
 
   .application__contacts {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
     padding: 0;
   }
 
@@ -472,13 +527,18 @@
     }
   }
 
+  .application__comment {
+    margin-top: 76px;
+    margin-bottom: 67px;
+  }
+
   .application__comment-area {
     margin: 0;
   }
 
   .application__addon {
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 34px;
   }
 
   .application__addon-checkbox {
@@ -496,7 +556,7 @@
 
   .application__send {
     padding: 0;
-    margin-bottom: 70px;
+    margin-bottom: 87px;
   }
 
   .application__button {
