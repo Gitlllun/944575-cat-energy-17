@@ -82,6 +82,8 @@
 
 .example__input {
   position: absolute;
+  bottom: 45px;
+  left: 50%;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -273,6 +275,10 @@
     margin: 0 auto;
   }
 
+  .example__input {
+    bottom: 330px;
+  }
+
   .example__cats {
     margin: 0 auto 14px auto;
 
@@ -405,8 +411,13 @@
   .example__input--after:checked ~ .example__cats .example__cat--before {
     width: 0%;
   }
-}
 
+  .example__input--before:focus ~ .example__toggle .example__label--before,
+  .example__input--after:focus ~ .example__toggle .example__label--after {
+    border-bottom-style: solid;
+    border-color: rgba(17, 17, 17, 0.4);
+  }
+}
 
 //ДЕСКТОП//
 
