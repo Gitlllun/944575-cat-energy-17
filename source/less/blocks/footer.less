@@ -12,20 +12,20 @@
   position: relative;
   align-self: center;
   margin-top: 37px;
+
+  &:hover[href],
+  &:focus[href] {
+    opacity: 0.8;
+  }
+
+  &:active[href] {
+    opacity: 0.6;
+  }
 }
 
 .footer__logo-image {
   width: 128px;
   height: 24px;
-
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
 }
 
 .footer__list {

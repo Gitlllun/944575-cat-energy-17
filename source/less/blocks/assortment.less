@@ -12,6 +12,10 @@
   margin-top: -1px;
 }
 
+.assortment__link {
+  text-decoration: none;
+}
+
 .assortment__image {
   padding-left: 20px;
 }
@@ -148,7 +152,6 @@
   }
 }
 
-
 //ПЛАНШЕТ//
 
 @media (min-width: @tablet-width) {
@@ -156,7 +159,6 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    margin-top: 26px;
   }
 
   .assortment__item {
@@ -259,6 +261,10 @@
 //ДЕСКТОП//
 
 @media (min-width: @desktop-width) {
+  .assortment__list {
+    margin-top: 26px;
+  }
+
   .assortment__item {
     width: 245px;
     margin: 140px 80px 0 0;

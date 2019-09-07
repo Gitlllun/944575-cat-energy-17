@@ -1,9 +1,8 @@
-.copyright__link {
+.copyright {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
-
   font-family: "Arial", sans-serif;
   font-size: 16px;
   color: @gray-two;
@@ -26,12 +25,12 @@
   fill: @gray;
 }
 
-.copyright__link:hover .copyright__logo,
-.copyright__link:focus .copyright__logo {
+.copyright:hover .copyright__logo,
+.copyright:focus .copyright__logo {
   fill: @leaf;
 }
 
-.copyright__link:active .copyright__logo {
+.copyright:active .copyright__logo {
   fill: @leaf;
   opacity: 0.3;
 }
@@ -39,7 +38,7 @@
 //ПЛАНШЕТ//
 
 @media (min-width: @tablet-width) {
-  .copyright__link {
+  .copyright {
     margin: 0;
     align-self: center;
   }
