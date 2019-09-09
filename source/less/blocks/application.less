@@ -97,17 +97,13 @@
   }
 }
 
-.application__choice-input:disabled ~ .application__choice-label {
-  opacity: 0.3;
-}
-
 .application__choice-input:checked ~ .application__choice-label::before {
   background-color: @leaf;
   background-clip: content-box;
 }
 
-.application__choice-input:focus ~ .application__choice-label::before {
-  border-color: #bababa;
+.application__choice-input:focus ~ .application__choice-label {
+  opacity: 0.3;
 }
 
 .application__title {
@@ -271,7 +267,8 @@
   }
 }
 
-.application__addon-input:disabled ~ .application__addon-label {
+.application__addon-input:focus ~ .application__addon-label {
+  border-color: #bababa;
   opacity: 0.3;
 }
 
@@ -283,8 +280,8 @@
   background-clip: content-box;
 }
 
-.application__addon-input:focus ~ .application__addon-label::before {
-  border-color: #bababa;
+.application__addon-input:active ~ .application__addon-label::before {
+  outline: none;
 }
 
 .application__send {
